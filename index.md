@@ -21,9 +21,9 @@ For half a century, the city of Chicago has promised to extend its subway system
 
 To evaluate these claims, we examine the relationship between demographic characteristics and transit ridership. Using a supervised machine learning method called Random Forest, we predict transit ridership on Chicago’s subway system, the “L,” with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis.
 
-## Altair Example
+## Monthly Ridership by Station
 
-Below is a chart of the incidence of measles since 1928 for the 50 US states.
+Below is a chart of the monthly ridership for each 'L' station in 2019.
 
 <div id="altair-chart-1"></div>
 
