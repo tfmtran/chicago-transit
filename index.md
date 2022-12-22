@@ -9,15 +9,17 @@ folium-loader:
   folium-chart-2: ["charts/percent_no_internet.html", "400"] # second argument is the desired height
 ---
 
-# Welcome!
+# Summary
 
-This single-page website demos how to display visualizations created with altair, hvplot, and folium.
 
-For examples of how to use markdown to style text, see this [this page](./another-page.html).
 
-# Example: Embedding Altair & Hvplot Charts
+# Background
 
-This section will show examples of embedding interactive charts produced using [Altair](https://altair-viz.github.io) and [Hvplot](https://hvplot.pyviz.org/).
+Access to reliable and efficient public transportation is integral to a city’s livability but understanding transit demand is challenging. Mass transit can support economic growth and productivity by reducing congestion and travel time to employment centers. It also supports social connectivity, including that of low-income groups who may not have the means for a private vehicle. Increasingly, mass transit also offers a more environmentally sustainable mode of transportation in an increasingly warming planet. However, as demographics shift within a city, the demand for public transportation may change accordingly. Predicting transit demand is thus an important tool for policymakers. 
+
+For half a century, the city of Chicago has promised to extend its subway system into the “Far South Side” neighborhoods to increase transit accessibility.  As of October 2022, the city is close to securing the required $3.6 billion to add 5.6 miles to the existing Red Line, extending it from 95th/Dan Ryan to 130th Street with four new stops near 103rd Street, 111th Street, Michigan Avenue, and 130th Street. The Red Line Extension Project claims to increase equity, economic opportunity, and sustainable transportation.  Yet critics say that the project “costs too much and does too little”.
+
+To evaluate these claims, we examine the relationship between demographic characteristics and transit ridership. Using a supervised machine learning method called Random Forest, we predict transit ridership on Chicago’s subway system, the “L,” with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis.
 
 ## Altair Example
 
