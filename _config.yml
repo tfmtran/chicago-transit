@@ -1,8 +1,8 @@
-title: MUSA 550
+title: Predicting Transit Demand for the Chicago ‘L’ Using Random Forest
 logo: /assets/img/logo.png
-description: Geospatial Data Science in Python.
+description: Saiya Sheth & Tiffany M. Tran
 show_downloads: false
-repository: MUSA-550-Fall-2021/github-pages-single-page-starter
+repository: tfmtran/chicago-transit
 google_analytics:
 remote_theme: pages-themes/minimal
 plugins:
