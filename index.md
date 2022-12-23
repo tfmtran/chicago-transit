@@ -1,8 +1,9 @@
 ---
 layout: default
 hv-loader:
-  hv-chart-1: ["charts/top-stations-hvplot.html", "700"] # second argument is the desired height
+  hv-chart-1: ["charts/top-stations-hvplot.html", "500"] # second argument is the desired height
   hv-chart-2: ["charts/monthly-rider-hvplot.html", "700"] 
+  hv-chart-3: ["charts/stations-rider-hvplot.html", "500"] 
 altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 ---
@@ -18,6 +19,12 @@ Access to reliable and efficient public transportation is integral to a city’s
 For half a century, the city of Chicago has promised to extend its subway system into the “Far South Side” neighborhoods to increase transit accessibility.  As of October 2022, the city is close to securing the required $3.6 billion to add 5.6 miles to the existing Red Line, extending it from 95th/Dan Ryan to 130th Street with four new stops near 103rd Street, 111th Street, Michigan Avenue, and 130th Street. The Red Line Extension Project claims to increase equity, economic opportunity, and sustainable transportation.  Yet critics say that the project “costs too much and does too little”.
 
 To evaluate these claims, we examine the relationship between demographic characteristics and transit ridership. Using a supervised machine learning method called Random Forest, we predict transit ridership on Chicago’s subway system, the “L,” with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis.
+
+## Total Ridership at 'L' Rail Stations in 2019
+
+Below is a chart of the total ridership for each 'L' station in 2019.
+
+<div id="hv-chart-2"></div>
 
 ## Top 20 Stations with Highest Annual Ridership
 
