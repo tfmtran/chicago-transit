@@ -3,7 +3,7 @@ layout: default
 altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 hv-loader:
-  hv-chart-1: ["charts/top-stations-hvplot.html", "500"] # second argument is the desired height
+  hv-chart-1: ["charts/top-stations-hvplot.html", "700"] # second argument is the desired height
 folium-loader:
   folium-chart-1: ["charts/foliumChart.html", "400"] # second argument is the desired height
   folium-chart-2: ["charts/percent_no_internet.html", "400"] # second argument is the desired height
@@ -34,9 +34,9 @@ import altair as alt
 alt.renderers.enable('notebook')
 ```
 
-## HvPlot Example
+## Top 20 Stations with Highest Annual Ridership
 
-Lastly, the measles incidence produced using the HvPlot package:
+The Red Line terminus at 95th/Dan Ryan was the 14th most transited station in 2019, out of 144 stations, with over 2.8 million riders.
 
 <div id="hv-chart-1"></div>
 
