@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>top-stations-hvplot</title>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" type="text/css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/alerts.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/card.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/dataframe.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/debugger.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/json.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/loading.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/markdown.css" type="text/css" />
+            <link rel="stylesheet" href="https://unpkg.com/@holoviz/panel@0.13.1/dist/css/widgets.css" type="text/css" />
+            <style>
+                
+            .bk.pn-loading.arcs:before {
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0ibWFyZ2luOiBhdXRvOyBiYWNrZ3JvdW5kOiBub25lOyBkaXNwbGF5OiBibG9jazsgc2hhcGUtcmVuZGVyaW5nOiBhdXRvOyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4gIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjMyIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZT0iI2MzYzNjMyIgc3Ryb2tlLWRhc2hhcnJheT0iNTAuMjY1NDgyNDU3NDM2NjkgNTAuMjY1NDgyNDU3NDM2NjkiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+ICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZHVyPSIxcyIga2V5VGltZXM9IjA7MSIgdmFsdWVzPSIwIDUwIDUwOzM2MCA1MCA1MCI+PC9hbmltYXRlVHJhbnNmb3JtPiAgPC9jaXJjbGU+PC9zdmc+");
+              background-size: auto calc(min(50%, 400px));
+            }
+            
+            </style>
+
+          <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.3.min.js"></script><script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.3.min.js"></script><script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.3.min.js"></script><script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.3.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script><script type="text/javascript" src="https://unpkg.com/@holoviz/panel@0.13.1/dist/panel.min.js"></script><script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+  </head>
+  <body>
+          
+              <div class="bk-root" id="418d6236-ad49-4480-a871-83afee098462" data-root-id="3083"></div>
+      
+        <script type="application/json" id="3224">
+          {"11ce8d7a-d945-4f11-98a1-39d00508de33":{"defs":[{"extends":null,"module":null,"name":"ReactiveHTML1","overrides":[],"properties":[]},{"extends":null,"module":null,"name":"FlexBox1","overrides":[],"properties":[{"default":"flex-start","kind":null,"name":"align_content"},{"default":"flex-start","kind":null,"name":"align_items"},{"default":"row","kind":null,"name":"flex_direction"},{"default":"wrap","kind":null,"name":"flex_wrap"},{"default":"flex-start","kind":null,"name":"justify_content"}]},{"extends":null,"module":null,"name":"GridStack1","overrides":[],"properties":[{"default":"warn","kind":null,"name":"mode"},{"default":null,"kind":null,"name":"ncols"},{"default":null,"kind":null,"name":"nrows"},{"default":true,"kind":null,"name":"allow_resize"},{"default":true,"kind":null,"name":"allow_drag"},{"default":[],"kind":null,"name":"state"}]},{"extends":null,"module":null,"name":"click1","overrides":[],"properties":[{"default":"","kind":null,"name":"terminal_output"},{"default":"","kind":null,"name":"debug_name"},{"default":0,"kind":null,"name":"clears"}]},{"extends":null,"module":null,"name":"NotificationAreaBase1","overrides":[],"properties":[{"default":"bottom-right","kind":null,"name":"position"},{"default":0,"kind":null,"name":"_clear"}]},{"extends":null,"module":null,"name":"NotificationArea1","overrides":[],"properties":[{"default":[],"kind":null,"name":"notifications"},{"default":"bottom-right","kind":null,"name":"position"},{"default":0,"kind":null,"name":"_clear"},{"default":[{"background":"#ffc107","icon":{"className":"fas fa-exclamation-triangle","color":"white","tagName":"i"},"type":"warning"},{"background":"#007bff","icon":{"className":"fas fa-info-circle","color":"white","tagName":"i"},"type":"info"}],"kind":null,"name":"types"}]},{"extends":null,"module":null,"name":"Notification","overrides":[],"properties":[{"default":null,"kind":null,"name":"background"},{"default":3000,"kind":null,"name":"duration"},{"default":null,"kind":null,"name":"icon"},{"default":"","kind":null,"name":"message"},{"default":null,"kind":null,"name":"notification_type"},{"default":false,"kind":null,"name":"_destroyed"}]},{"extends":null,"module":null,"name":"TemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]},{"extends":null,"module":null,"name":"MaterialTemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]}],"roots":{"references":[{"attributes":{"children":[{"id":"3084"},{"id":"3088"},{"id":"3142"}],"margin":[0,0,0,0],"name":"Row04448","tags":["embedded"]},"id":"3083","type":"Row"},{"attributes":{"end":6869751.5,"reset_end":6869751.5,"reset_start":0.0,"tags":[[["Annual Ridership","Annual Ridership",null]]]},"id":"3085","type":"Range1d"},{"attributes":{},"id":"3093","type":"LinearScale"},{"attributes":{},"id":"3095","type":"CategoricalScale"},{"attributes":{"margin":[5,5,5,5],"name":"HSpacer04453","sizing_mode":"stretch_width"},"id":"3142","type":"Spacer"},{"attributes":{"factors":["Logan Square (Blue Line)","Monroe (Blue Line)","Clark/Division (Red Line)","Midway (Orange Line)","Addison (Red Line)","Jackson (Red Line)","95th/Dan Ryan (Red Line)","Monroe (Red Line)","Washington/Wabash (Brown, Green, Orange, Purple &amp; Pink lines)","Roosevelt (Red, Orange &amp; Green lines)","Fullerton (Red, Brown &amp; Purple lines)","Belmont (Red, Brown &amp; Purple lines)","Grand (Red Line)","State/Lake (Brown, Green, Orange, Pink &amp; Purple lines)","O'Hare (Blue Line)","Washington (Blue Line)","Chicago (Red Line)","Clark/Lake (Blue, Brown, Green, Orange, Purple &amp; Pink lines)","Lake (Red Line)"],"tags":[[["Rail Line","Rail Line",null]]]},"id":"3086","type":"FactorRange"},{"attributes":{},"id":"3118","type":"Selection"},{"attributes":{"fill_alpha":{"value":0.1},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"gray"},"height":{"value":0.8},"line_alpha":{"value":0.1},"right":{"field":"Annual_Ridership"},"y":{"field":"Rail_Line"}},"id":"3121","type":"HBar"},{"attributes":{"fill_alpha":{"value":1.0},"fill_color":{"value":"gray"},"hatch_alpha":{"value":1.0},"hatch_color":{"value":"gray"},"hatch_scale":{"value":12.0},"hatch_weight":{"value":1.0},"height":{"value":0.8},"left":{"value":0},"line_alpha":{"value":1.0},"line_cap":{"value":"butt"},"line_color":{"value":"black"},"line_dash":{"value":[]},"line_dash_offset":{"value":0},"line_join":{"value":"bevel"},"line_width":{"value":1},"right":{"field":"Annual_Ridership"},"y":{"field":"Rail_Line"}},"id":"3125","type":"HBar"},{"attributes":{"callback":null,"renderers":[{"id":"3123"}],"tags":["hv_created"],"tooltips":[["Rail Line","@{Rail_Line}"],["Annual Ridership","@{Annual_Ridership}"]]},"id":"3087","type":"HoverTool"},{"attributes":{"hatch_color":{"value":"gray"},"height":{"value":0.8},"right":{"field":"Annual_Ridership"},"y":{"field":"Rail_Line"}},"id":"3120","type":"HBar"},{"attributes":{},"id":"3131","type":"AllLabels"},{"attributes":{"coordinates":null,"data_source":{"id":"3117"},"glyph":{"id":"3120"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3122"},"nonselection_glyph":{"id":"3121"},"selection_glyph":{"id":"3125"},"view":{"id":"3124"}},"id":"3123","type":"GlyphRenderer"},{"attributes":{"coordinates":null,"group":null,"text_color":"black","text_font_size":"12pt"},"id":"3089","type":"Title"},{"attributes":{"below":[{"id":"3097"}],"center":[{"id":"3100"},{"id":"3103"}],"height":500,"left":[{"id":"3101"}],"margin":[5,5,5,5],"min_border_bottom":10,"min_border_left":10,"min_border_right":10,"min_border_top":10,"renderers":[{"id":"3123"}],"sizing_mode":"fixed","title":{"id":"3089"},"toolbar":{"id":"3110"},"width":700,"x_range":{"id":"3085"},"x_scale":{"id":"3093"},"y_range":{"id":"3086"},"y_scale":{"id":"3095"}},"id":"3088","subtype":"Figure","type":"Plot"},{"attributes":{"margin":[5,5,5,5],"name":"HSpacer04452","sizing_mode":"stretch_width"},"id":"3084","type":"Spacer"},{"attributes":{"axis_label":"Annual Ridership","coordinates":null,"formatter":{"id":"3127"},"group":null,"major_label_policy":{"id":"3128"},"ticker":{"id":"3098"}},"id":"3097","type":"LinearAxis"},{"attributes":{},"id":"3128","type":"AllLabels"},{"attributes":{},"id":"3098","type":"BasicTicker"},{"attributes":{"axis":{"id":"3097"},"coordinates":null,"grid_line_color":null,"group":null,"ticker":null},"id":"3100","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.2},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"gray"},"height":{"value":0.8},"line_alpha":{"value":0.2},"right":{"field":"Annual_Ridership"},"y":{"field":"Rail_Line"}},"id":"3122","type":"HBar"},{"attributes":{},"id":"3106","type":"WheelZoomTool"},{"attributes":{"source":{"id":"3117"}},"id":"3124","type":"CDSView"},{"attributes":{},"id":"3105","type":"PanTool"},{"attributes":{"axis_label":"Rail Line","coordinates":null,"formatter":{"id":"3130"},"group":null,"major_label_policy":{"id":"3131"},"ticker":{"id":"3102"}},"id":"3101","type":"CategoricalAxis"},{"attributes":{},"id":"3139","type":"UnionRenderers"},{"attributes":{"axis":{"id":"3101"},"coordinates":null,"dimension":1,"grid_line_color":null,"group":null,"ticker":null},"id":"3103","type":"Grid"},{"attributes":{},"id":"3127","type":"BasicTickFormatter"},{"attributes":{},"id":"3102","type":"CategoricalTicker"},{"attributes":{"data":{"Annual_Ridership":{"__ndarray__":"AAAAwKWbWEEAAAAAAAD4fwAAAMAbPlZBAAAAAAAA+H8AAADAVixRQQAAAAAAAPh/AAAAABreT0EAAAAAAAD4fwAAAICvE01BAAAAAAAA+H8AAACACd1MQQAAAAAAAPh/AAAAgN/WTEEAAAAAAAD4fwAAAIDGkkxBAAAAAAAA+H8AAAAAvGBMQQAAAAAAAPh/AAAAAE9zSkEAAAAAAAD4fwAAAABPc0pBAAAAAAAA+H8AAAAAm9lHQQAAAAAAAPh/AAAAgKQhRkEAAAAAAAD4fwAAAACFgUVBAAAAAAAA+H8AAACAOdlDQQAAAAAAAPh/AAAAgP3QQ0EAAAAAAAD4fwAAAACO5kJBAAAAAAAA+H8AAACA+rZCQQAAAAAAAPh/AAAAABFOQUEAAAAAAAD4fwAAAABpQUFB","dtype":"float64","order":"little","shape":[39]},"Rail_Line":["Lake (Red Line)","nan","Clark/Lake (Blue, Brown, Green, Orange, Purple &amp; Pink lines)","nan","Chicago (Red Line)","nan","Washington (Blue Line)","nan","O'Hare (Blue Line)","nan","State/Lake (Brown, Green, Orange, Pink &amp; Purple lines)","nan","Grand (Red Line)","nan","Belmont (Red, Brown &amp; Purple lines)","nan","Fullerton (Red, Brown &amp; Purple lines)","nan","Roosevelt (Red, Orange &amp; Green lines)","nan","Roosevelt (Red, Orange &amp; Green lines)","nan","Washington/Wabash (Brown, Green, Orange, Purple &amp; Pink lines)","nan","Monroe (Red Line)","nan","95th/Dan Ryan (Red Line)","nan","Jackson (Red Line)","nan","Addison (Red Line)","nan","Midway (Orange Line)","nan","Clark/Division (Red Line)","nan","Monroe (Blue Line)","nan","Logan Square (Blue Line)"]},"selected":{"id":"3118"},"selection_policy":{"id":"3139"}},"id":"3117","type":"ColumnDataSource"},{"attributes":{},"id":"3130","type":"CategoricalTickFormatter"},{"attributes":{},"id":"3104","type":"SaveTool"},{"attributes":{"overlay":{"id":"3109"}},"id":"3107","type":"BoxZoomTool"},{"attributes":{},"id":"3108","type":"ResetTool"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"3109","type":"BoxAnnotation"},{"attributes":{"tools":[{"id":"3087"},{"id":"3104"},{"id":"3105"},{"id":"3106"},{"id":"3107"},{"id":"3108"}]},"id":"3110","type":"Toolbar"}],"root_ids":["3083"]},"title":"Bokeh Application","version":"2.4.3"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                  const docs_json = document.getElementById('3224').textContent;
+                  const render_items = [{"docid":"11ce8d7a-d945-4f11-98a1-39d00508de33","root_ids":["3083"],"roots":{"3083":"418d6236-ad49-4480-a871-83afee098462"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+  </body>
+</html>
