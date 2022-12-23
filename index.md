@@ -26,11 +26,13 @@ Below is a chart of the total ridership for each 'L' station in 2019.
 
 <div id="hv-chart-3"></div>
 
+
 ## Top 20 Stations with Highest Annual Ridership
 
 The Red Line terminus at 95th/Dan Ryan was the 14th most transited station in 2019, out of 144 stations, with over 2.8 million riders.
 
 <div id="hv-chart-1"></div>
+
 
 ## Monthly Ridership by Station
 
