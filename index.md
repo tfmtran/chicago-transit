@@ -18,7 +18,9 @@ Access to reliable and efficient public transportation is integral to a city’s
 
 For half a century, the city of Chicago has promised to extend its subway system into the “Far South Side” neighborhoods to increase transit accessibility.  As of October 2022, the city is close to securing the required $3.6 billion to add 5.6 miles to the existing Red Line, extending it from 95th/Dan Ryan to 130th Street with four new stops near 103rd Street, 111th Street, Michigan Avenue, and 130th Street. The Red Line Extension Project claims to increase equity, economic opportunity, and sustainable transportation.  Yet critics say that the project “costs too much and does too little”.
 
-To evaluate these claims, we examine the relationship between demographic characteristics and transit ridership. Using a supervised machine learning method called Random Forest, we predict transit ridership on Chicago’s subway system, the “L,” with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis.
+To evaluate these claims, we examine the relationship between demographic characteristics and transit ridership. Using a supervised machine learning method called Random Forest, we predict transit ridership on Chicago’s subway system, the “L,” with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis. 
+
+# Exploratory Analysis
 
 ## Total Ridership at 'L' Rail Stations in 2019
 
@@ -39,6 +41,51 @@ The Red Line terminus at 95th/Dan Ryan was the 14th most transited station in 20
 Below is a chart of the monthly ridership for each 'L' station in 2019.
 
 <div id="hv-chart-2"></div>
+
+# Overview of Data Wrangling and Methods
+
+We use census tract level data all from 2019 to avoid any anomalies in travel patterns related to the COVID-19 pandemic. To load demographic data, we access the US Census API using the cenpy package and query 2019 data from the American Community Survey including:
+-total population;
+-total number employed;
+-total population 25 years and older with college education;
+-estimated labor force population;
+-median income in the past 12 months;
+-household size by vehicles available;
+-number of vehicles used by workers ages 16 and older;
+-aggregate travel time to workplace in minutes;
+-total number commuting to workplace by car;
+-total number by means of transportation to work; 
+-median house value in dollars; and
+-total white population.
+
+The listed variables were chosen based on prevailing knowledge of the relationship between public transportation ridership in urban areas and certain indicators. For transit data, we accessed Chicago’s Open Data Portal through the API and filtered for 2019 data. We accessed the API for Open Street Maps and queried for several amenities within the Cook County boundary: restaurants, pubs, bars, schools, and offices. 
+
+We rely on a variety of packages to visualize each variable, particularly hvplot and altair. To create a random forest model, we use RandomForestRegressor from the scikit-learn package. RandomForestRegressor is a meta estimator that fits classifying decision trees on various iterations of the input features (predictors). The estimator utilizes averaging to improve the predictive accuracy. Our label feature, or dependent variable, is Annual Ridership. 
+
+To prepare the data for the random forest model, we use a preprocessor transformer from the scikit-learn package. We split the dataset into a training set and a test set. Because there are relatively few observations (n=144), we use a 60-40 split instead of 70-30 to give the test set more random variation. We develop and run three regression models (linear, two-step random forest, and optimized random forest) to understand the random forest model’s relative accuracy. 
+
+# Results
+
+Upon running the model, we found that including only demographic and transit data in the optimized random forest model resulted in a R2 (test score) of only 0.17. To potentially increase the accuracy of the model, we experimented with adding distance-based features from restaurants, pubs, bars, schools, and offices. Checking for multicollinearity among all features, we found that the following features did not have severe multicollinearity (INCLUDE CORR MARIX? TABLE?)
+
+The optimized random forest model produced a best estimator of 0.171, with 200 estimators and a maximum depth of 5 in the decision tree. The optimized random forest model’s average absolute error (AAE) is 636736.63 with an accuracy of 25.86%. 
+
+## Mean Percent Error
+
+The highest percent errors (>400%) are for stations along the Purple Line, an extension of the Red Line. The lower percent errors are in areas known as food and beverage destinations, such as the Loop and West Loop, as well as near universities such as Northwestern University in Evanston, and the University of Chicago on the South Side. 
+
+## Top 5 Importance Features
+
+The top five predictive features of annual “L” ridership are log mean distance to food and beverage, log median income, log mean distance to offices, log mean distance to schools, and percent of population commuting to work by car. The distance to food and beverage holds the most predictive power compared to the other features in the model.
+
+# Policy Implications
+
+The stations with the highest annual ridership are Lake, Clark/Lake, Chicago, Washington, and O’Hare. Except for O’Hare, four of the top five stations are located in the center of Chicago, an area with employment centers and where multiple rail lines converge (“The Loop”). The Clark/Lake station, for example, connects six different rail lines. To expand public transportation, policymakers could evaluate census tracts across the five most important features (Table 3) and plan for improved transportation access in those tracts with high potential transit demand. Alternatively, to create transit demand around particular stations, policymakers could focus on economic development of the food and beverage industry in those areas. 
+
+## Limitations
+
+The major limitation of the study relates to data wrangling. More datasets and feature engineering would improve the model’s accuracy and robustness. Features that could be included in future analysis are crime data, employment types, airport (O’Hare and Midway) locations, and rideshare data. Additionally, because Chicago has a robust bus and commuter rail system, these stops and stations could be added to the model to include more census tracts into the dataset and calculate the spatial lag of nearby stops and stations. Nonetheless, this analysis is useful as a starting point for further research into expanding public transit in Chicago and is timely in its discussion of the ongoing Red Line Expansion project. A model with increased accuracy and generalizability could enable predictive modeling across other comparable urban spaces. 
+
 
 ## Notes
 
