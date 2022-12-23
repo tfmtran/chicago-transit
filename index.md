@@ -4,6 +4,7 @@ altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 hv-loader:
   hv-chart-1: ["charts/top-stations-hvplot.html", "700"] # second argument is the desired height
+  hv-chart-2: ["charts/monthly-rider-hvplot.html", "700"] 
 folium-loader:
   folium-chart-1: ["charts/foliumChart.html", "400"] # second argument is the desired height
   folium-chart-2: ["charts/percent_no_internet.html", "400"] # second argument is the desired height
@@ -21,24 +22,17 @@ For half a century, the city of Chicago has promised to extend its subway system
 
 To evaluate these claims, we examine the relationship between demographic characteristics and transit ridership. Using a supervised machine learning method called Random Forest, we predict transit ridership on Chicago’s subway system, the “L,” with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis.
 
-## Monthly Ridership by Station
-
-Below is a chart of the monthly ridership for each 'L' station in 2019.
-
-<div id="altair-chart-1"></div>
-
-This was produced using Altair and embedded in this static web page. Note that you can also display Python code on this page:
-
-```python
-import altair as alt
-alt.renderers.enable('notebook')
-```
-
 ## Top 20 Stations with Highest Annual Ridership
 
 The Red Line terminus at 95th/Dan Ryan was the 14th most transited station in 2019, out of 144 stations, with over 2.8 million riders.
 
 <div id="hv-chart-1"></div>
+
+## Monthly Ridership by Station
+
+Below is a chart of the monthly ridership for each 'L' station in 2019.
+
+<div id="hv-chart-2"></div>
 
 ## Notes
 
