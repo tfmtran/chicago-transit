@@ -24,7 +24,7 @@ To evaluate these claims, we examine the relationship between demographic charac
 
 Below is a chart of the total ridership for each 'L' station in 2019.
 
-<div id="hv-chart-2"></div>
+<div id="hv-chart-3"></div>
 
 ## Top 20 Stations with Highest Annual Ridership
 
