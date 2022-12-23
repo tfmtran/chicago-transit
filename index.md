@@ -1,13 +1,10 @@
 ---
 layout: default
-altair-loader:
-  altair-chart-1: "charts/monthly-rider-altair.json"
 hv-loader:
   hv-chart-1: ["charts/top-stations-hvplot.html", "700"] # second argument is the desired height
   hv-chart-2: ["charts/monthly-rider-hvplot.html", "700"] 
-folium-loader:
-  folium-chart-1: ["charts/foliumChart.html", "400"] # second argument is the desired height
-  folium-chart-2: ["charts/percent_no_internet.html", "400"] # second argument is the desired height
+altair-loader:
+  altair-chart-1: "charts/monthly-rider-altair.json"
 ---
 
 # Summary
