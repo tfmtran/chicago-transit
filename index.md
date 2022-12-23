@@ -1,9 +1,9 @@
 ---
 layout: default
 hv-loader:
-  hv-chart-1: ["charts/top-stations-hvplot.html", "500"] # second argument is the desired height
-  hv-chart-2: ["charts/monthly-rider-hvplot.html", "800"] 
-  hv-chart-3: ["charts/stations-rider-hvplot.html", "500"] 
+  hv-chart-1: ["charts/top-stations-hvplot.html", "600"] # second argument is the desired height
+  hv-chart-2: ["charts/monthly-rider-hvplot.html", "900"] 
+  hv-chart-3: ["charts/stations-rider-hvplot.html", "600"] 
 altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 ---
