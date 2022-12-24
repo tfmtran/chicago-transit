@@ -73,7 +73,7 @@ To prepare the data for the random forest model, we use a preprocessor transform
 
 Upon running the model, we found that including only demographic and transit data in the optimized random forest model resulted in a R2 (test score) of only 0.17. To potentially increase the accuracy of the model, we experimented with adding distance-based features from restaurants, pubs, bars, schools, and offices. Checking for multicollinearity among all features, we found that the following features did not have severe multicollinearity.
 
-The optimized random forest model produced a best estimator of 0.171, with 200 estimators and a maximum depth of 5 in the decision tree. The optimized random forest model’s average absolute error (AAE) is 636736.63 with an accuracy of 25.86%. 
+The optimized random forest model produced a best estimator of 0.171, with 200 estimators and a maximum depth of 5 in the decision tree. Its average absolute error (AAE) was 636736.63 with an accuracy of 25.86%. 
 
 Below is a comparison chart of the y-values from the test set and the predicted model.
 
