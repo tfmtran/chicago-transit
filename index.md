@@ -6,8 +6,8 @@ hv-loader:
   hv-chart-3: ["charts/stations-rider-hvplot.html", "600"] 
   hv-chart-4: ["charts/importance-hvplot.html", "500"] 
   hv-chart-5: ["charts/food-bev-hvplot.html", "600"] 
-  hv-chart-5: ["charts/y-hvplot.html", "300"] 
-  hv-chart-6: ["charts/percent-error-hvplot.html", "600"] 
+  hv-chart-6: ["charts/y-hvplot.html", "300"] 
+  hv-chart-7: ["charts/percent-error-hvplot.html", "600"] 
 altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 ---
@@ -77,13 +77,13 @@ The optimized random forest model produced a best estimator of 0.171, with 200 e
 
 Below is a comparison chart of the y-values from the test set and the predicted model.
 
-<div id="hv-chart-5"></div>
+<div id="hv-chart-6"></div>
 
 ## Mean Percent Error
 
 The highest percent errors (>400%) are for stations along the Purple Line, an extension of the Red Line. The lower percent errors are in areas known as food and beverage destinations, such as the Loop and West Loop, as well as near universities such as Northwestern University in Evanston, and the University of Chicago on the South Side. 
 
-<div id="hv-chart-6"></div>
+<div id="hv-chart-7"></div>
 
 
 ## Top 5 Importance Features
