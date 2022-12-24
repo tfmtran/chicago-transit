@@ -11,35 +11,36 @@ altair-loader:
 
 # Summary
 
-
+- To better understand transit demand for the “L”, we examine the relationship between transit ridership and demographic and neighborhood characteristics.
+- The top five predictive features of annual “L” ridership are log mean distance to food and beverage, log median income, log mean distance to offices, log mean distance to schools, and percent of population commuting to work by car. 
+- To expand public transportation, policymakers could evaluate census tracts across the five most important features and plan for improved transportation access in those tracts with high potential transit demand. Alternatively, to create transit demand around particular stations, policymakers could focus on economic development of the food and beverage industry in those areas.
 
 # Background
 
 Access to reliable and efficient public transportation is integral to a city’s livability but understanding transit demand is challenging. Mass transit can support economic growth and productivity by reducing congestion and travel time to employment centers. It also supports social connectivity, including that of low-income groups who may not have the means for a private vehicle. Increasingly, mass transit also offers a more environmentally sustainable mode of transportation in an increasingly warming planet. However, as demographics shift within a city, the demand for public transportation may change accordingly. Predicting transit demand is thus an important tool for policymakers. 
 
-For half a century, the city of Chicago has promised to extend its subway system into the “Far South Side” neighborhoods to increase transit accessibility.  As of October 2022, the city is close to securing the required $3.6 billion to add 5.6 miles to the existing Red Line, extending it from 95th/Dan Ryan to 130th Street with four new stops near 103rd Street, 111th Street, Michigan Avenue, and 130th Street. The Red Line Extension Project claims to increase equity, economic opportunity, and sustainable transportation.  Yet critics say that the project “costs too much and does too little”.
+For half a century, the city of Chicago has promised to extend its subway system into the “Far South Side” neighborhoods to increase transit accessibility. As of October 2022, the city is close to securing the required $3.6 billion to add 5.6 miles to the existing Red Line on Chicago’s subway system, the “L,” extending it from 95th/Dan Ryan to 130th Street with four new stops near 103rd Street, 111th Street, Michigan Avenue, and 130th Street. The Red Line Extension Project claims to increase equity, economic opportunity, and sustainable transportation. Yet critics say that the project “costs too much and does too little”.  
 
-To evaluate these claims, we examine the relationship between demographic characteristics and transit ridership. Using a supervised machine learning method called Random Forest, we predict transit ridership on Chicago’s subway system, the “L,” with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis. 
+To better understand transit demand for the “L”, we examine the relationship between transit ridership and demographic and neighborhood characteristics. Using a supervised machine learning method called random forest, we predict transit ridership with particular attention to the proposed Red Line Extension Project. We combine US Census data at the census tract level, transit data from the Chicago Transit Authority (CTA), and data from Open Street Maps, relying on Python programming language throughout the analysis.
 
 # Exploratory Analysis
 
 ## Total Ridership at 'L' Rail Stations in 2019
 
-Below is a chart of the total ridership for each 'L' station in 2019.
+Below is a map of all 'L' rail stations, colored by the total ridership in 2019. Lighter colors indicate higher ridership counts.
 
 <div id="hv-chart-3"></div>
 
+## Top 20 Stations with Highest Annual Ridership in 2019
 
-## Top 20 Stations with Highest Annual Ridership
-
-The Red Line terminus at 95th/Dan Ryan was the 14th most transited station in 2019, out of 144 stations, with over 2.8 million riders.
+The stations with the highest annual ridership are Lake, Clark/Lake, Chicago, Washington, and O’Hare. Except for O’Hare, four of the top five stations are located in the center of Chicago, an area with employment centers and where multiple rail lines converge (“The Loop”). The Red Line terminus at 95th/Dan Ryan was the 14th most transited station in 2019, out of 144 stations, with over 2.8 million riders.
 
 <div id="hv-chart-1"></div>
 
 
 ## Monthly Ridership by Station
 
-Below is a chart of the monthly ridership for each 'L' station in 2019.
+Below is a heatmap of the monthly ridership for each 'L' station in 2019. Lighter colors indicate higher ridership counts here as well.
 
 <div id="hv-chart-2"></div>
 
@@ -84,18 +85,12 @@ The top five predictive features of annual “L” ridership are log mean distan
 
 # Policy Implications
 
-The stations with the highest annual ridership are Lake, Clark/Lake, Chicago, Washington, and O’Hare. Except for O’Hare, four of the top five stations are located in the center of Chicago, an area with employment centers and where multiple rail lines converge (“The Loop”). The Clark/Lake station, for example, connects six different rail lines. To expand public transportation, policymakers could evaluate census tracts across the five most important features (Table 3) and plan for improved transportation access in those tracts with high potential transit demand. Alternatively, to create transit demand around particular stations, policymakers could focus on economic development of the food and beverage industry in those areas. 
+The stations with the highest annual ridership are Lake, Clark/Lake, Chicago, Washington, and O’Hare. Except for O’Hare, four of the top five stations are located in the center of Chicago, an area with employment centers and where multiple rail lines converge (“The Loop”). The Clark/Lake station, for example, connects six different rail lines. To expand public transportation, policymakers could evaluate census tracts across the five most important features and plan for improved transportation access in those tracts with high potential transit demand. Alternatively, to create transit demand around particular stations, policymakers could focus on economic development of the food and beverage industry in those areas. 
 
 ## Limitations
 
 The major limitation of the study relates to data wrangling. More datasets and feature engineering would improve the model’s accuracy and robustness. Features that could be included in future analysis are crime data, employment types, airport (O’Hare and Midway) locations, and rideshare data. Additionally, because Chicago has a robust bus and commuter rail system, these stops and stations could be added to the model to include more census tracts into the dataset and calculate the spatial lag of nearby stops and stations. Nonetheless, this analysis is useful as a starting point for further research into expanding public transit in Chicago and is timely in its discussion of the ongoing Red Line Expansion project. A model with increased accuracy and generalizability could enable predictive modeling across other comparable urban spaces. 
 
-
-## Notes
-
-- See the [lecture 13A slides](https://musa-550-fall-2022.github.io/slideslecture-13A.html) for the code that produced these plots.
-
-**Important: When embedding charts, you will likely need to adjust the width/height of the charts before embedding them in the page so they fit nicely when embedded.**
 
 # Example: Embedding Folium charts
 
