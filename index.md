@@ -4,6 +4,7 @@ hv-loader:
   hv-chart-1: ["charts/top-stations-hvplot.html", "600"] # second argument is the desired height
   hv-chart-2: ["charts/monthly-rider-hvplot.html", "900"] 
   hv-chart-3: ["charts/stations-rider-hvplot.html", "600"] 
+  hv-chart-4: ["charts/importance-hvplot.html", "500"] 
 altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 ---
@@ -90,7 +91,7 @@ The highest percent errors (>400%) are for stations along the Purple Line, an ex
 
 The top five predictive features of annual “L” ridership are log mean distance to food and beverage, log median income, log mean distance to offices, log mean distance to schools, and percent of population commuting to work by car. The distance to food and beverage holds the most predictive power compared to the other features in the model.
 
-<div id="importance chart.png"></div>
+<div id="importance-hvplot.html"></div>
 
 # Policy Implications
 
