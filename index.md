@@ -5,6 +5,7 @@ hv-loader:
   hv-chart-2: ["charts/monthly-rider-hvplot.html", "900"] 
   hv-chart-3: ["charts/stations-rider-hvplot.html", "600"] 
   hv-chart-4: ["charts/importance-hvplot.html", "500"] 
+  hv-chart-4: ["charts/food-bev-hvplot.html", "600"] 
 altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 ---
@@ -82,26 +83,25 @@ The top five predictive features of annual “L” ridership are log mean distan
 
 <div id="hv-chart-4"></div>
 
+Outside of the city center, 
+
+<div id="hv-chart-4"></div>
+
 # Policy Implications
 
 The stations with the highest annual ridership are Lake, Clark/Lake, Chicago, Washington, and O’Hare. Except for O’Hare, four of the top five stations are located in the center of Chicago, an area with employment centers and where multiple rail lines converge (“The Loop”). The Clark/Lake station, for example, connects six different rail lines. To expand public transportation, policymakers could evaluate census tracts across the five most important features and plan for improved transportation access in those tracts with high potential transit demand. Alternatively, to create transit demand around particular stations, policymakers could focus on economic development of the food and beverage industry in those areas. 
 
 ## Limitations
 
-The major limitation of the study relates to data wrangling. More datasets and feature engineering would improve the model’s accuracy and robustness. Features that could be included in future analysis are crime data, employment types, airport (O’Hare and Midway) locations, and rideshare data. Additionally, because Chicago has a robust bus and commuter rail system, these stops and stations could be added to the model to include more census tracts into the dataset and calculate the spatial lag of nearby stops and stations. Nonetheless, this analysis is useful as a starting point for further research into expanding public transit in Chicago and is timely in its discussion of the ongoing Red Line Expansion project. A model with increased accuracy and generalizability could enable predictive modeling across other comparable urban spaces. 
+The major limitation of the study relates to data wrangling. More datasets and feature engineering would improve the model’s accuracy and robustness. Features that could be included in future analysis are crime data, employment types, airport (O’Hare and Midway) locations, and rideshare data. Additionally, because Chicago has a robust bus and commuter rail system, these stops and stations could be added to the model to include more census tracts into the dataset and calculate the spatial lag of nearby stops and stations. Nonetheless, this analysis is useful as a starting point for further research into expanding public transit in Chicago and is timely in its discussion of the ongoing Red Line Expansion project. A model with increased accuracy and generalizability could enable predictive modeling across other comparable urban spaces.
 
+### Sources
+Chicago Transit Authority (CTA). (2022). Facts at a glance. Transit Chicago. https://www.transitchicago.com/facts/ 
+Chicago Transit Authority (CTA). (2022). Red Line Extension Project. Transit Chicago. https://www.transitchicago.com/rle/ 
+CURBED Chicago. (2019, March 10). Chicago’s traffic was the second worst in the nation in 2019, says report. CURBED. https://chicago.curbed.com/2019/2/14/18224967/chicago-traffic-report-worst-nation-transportation 
+Evans, M. (2022, August 2). Far South Siders have been promised a Red Line extension for 50 years. Now, the CTA says it’s closer than ever to happening. Block Club Chicago. https://blockclubchicago.org/2022/08/02/far-south-siders-have-been-promised-a-red-line-extension-for-50-years-now-the-cta-says-its-closer-than-ever-to-happening/
+Zotti, E. (2022, November 23). Opinion: The Red Line extension costs too much and does too little. CRAIN’s Chicago Business. https://www.chicagobusiness.com/opinion/opinion-cta-red-line-extension-too-expensive 
 
-# Example: Embedding Folium charts
-
-This post will show examples of embedding interactive maps produced using [Folium](https://github.com/python-visualization/folium).
-
-## OSMnx and Street Networks
-
-The shortest route between the Art Museum and the Liberty Bell:
-
-<div id="folium-chart-1"></div>
-
-<br/>
 
 ## Percentage of Households without Internet
 
