@@ -37,14 +37,13 @@ The stations with the highest annual ridership are Lake, Clark/Lake, Chicago, Wa
 
 <div id="hv-chart-1"></div>
 
-
 ## Monthly Ridership by Station
 
 Below is a heatmap of the monthly ridership for each 'L' station in 2019. Lighter colors indicate higher ridership counts here as well.
 
 <div id="hv-chart-2"></div>
 
-# Overview of Data Wrangling and Methods
+# Overview of Methods
 
 We use census tract level data all from 2019 to avoid any anomalies in travel patterns related to the COVID-19 pandemic. To load demographic data, we access the US Census API using the cenpy package and query 2019 data from the American Community Survey including:
 
