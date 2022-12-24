@@ -45,17 +45,29 @@ Below is a chart of the monthly ridership for each 'L' station in 2019.
 # Overview of Data Wrangling and Methods
 
 We use census tract level data all from 2019 to avoid any anomalies in travel patterns related to the COVID-19 pandemic. To load demographic data, we access the US Census API using the cenpy package and query 2019 data from the American Community Survey including:
+
 -total population;
+
 -total number employed;
+
 -total population 25 years and older with college education;
+
 -estimated labor force population;
+
 -median income in the past 12 months;
+
 -household size by vehicles available;
+
 -number of vehicles used by workers ages 16 and older;
+
 -aggregate travel time to workplace in minutes;
+
 -total number commuting to workplace by car;
+
 -total number by means of transportation to work; 
--median house value in dollars; and
+
+-median house value in dollars;
+
 -total white population.
 
 The listed variables were chosen based on prevailing knowledge of the relationship between public transportation ridership in urban areas and certain indicators. For transit data, we accessed Chicago’s Open Data Portal through the API and filtered for 2019 data. We accessed the API for Open Street Maps and queried for several amenities within the Cook County boundary: restaurants, pubs, bars, schools, and offices. 
@@ -77,6 +89,8 @@ The highest percent errors (>400%) are for stations along the Purple Line, an ex
 ## Top 5 Importance Features
 
 The top five predictive features of annual “L” ridership are log mean distance to food and beverage, log median income, log mean distance to offices, log mean distance to schools, and percent of population commuting to work by car. The distance to food and beverage holds the most predictive power compared to the other features in the model.
+
+<div id="importance chart.png"></div>
 
 # Policy Implications
 
