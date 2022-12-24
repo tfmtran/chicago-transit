@@ -5,7 +5,7 @@ hv-loader:
   hv-chart-2: ["charts/monthly-rider-hvplot.html", "900"] 
   hv-chart-3: ["charts/stations-rider-hvplot.html", "600"] 
   hv-chart-4: ["charts/importance-hvplot.html", "500"] 
-  hv-chart-4: ["charts/food-bev-hvplot.html", "600"] 
+  hv-chart-5: ["charts/food-bev-hvplot.html", "600"] 
 altair-loader:
   altair-chart-1: "charts/monthly-rider-altair.json"
 ---
@@ -83,13 +83,15 @@ The top five predictive features of annual “L” ridership are log mean distan
 
 <div id="hv-chart-4"></div>
 
-Outside of the city center, 
+Below is a map of all 'L' rail stations, colored by the total ridership in 2019. Lighter colors indicate longer distances to the nearest restaurants, pubs, or bars from the station. Outside of the city center, stations in neighborhoods to the north are closer to food and drink places than those in neighborhoods to the south. The Red Line terminal station at 95th/Dan Ryan has the third farthest distance from the nearest food and drink places out of 144 stations.
 
-<div id="hv-chart-4"></div>
+<div id="hv-chart-5"></div>
 
 # Policy Implications
 
 The stations with the highest annual ridership are Lake, Clark/Lake, Chicago, Washington, and O’Hare. Except for O’Hare, four of the top five stations are located in the center of Chicago, an area with employment centers and where multiple rail lines converge (“The Loop”). The Clark/Lake station, for example, connects six different rail lines. To expand public transportation, policymakers could evaluate census tracts across the five most important features and plan for improved transportation access in those tracts with high potential transit demand. Alternatively, to create transit demand around particular stations, policymakers could focus on economic development of the food and beverage industry in those areas. 
+
+Although the Red Line terminal station at 95th/Dan Ryan was the 14th most transited station in 2019, yet the 142nd closest to food and drink establishments, our model is unlikely to explain the predictors of ridership at this station.
 
 ## Limitations
 
